@@ -92,6 +92,7 @@ export class AppComponent {
         }
         case "Lose": {
           this.gameData.lost = true;
+          this.wronglyGuessedWord = event.word;
         }
       }
 
