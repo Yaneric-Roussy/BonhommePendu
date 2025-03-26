@@ -90,6 +90,9 @@ export class AppComponent {
           this.gameData.won = true;
           break;
         }
+        case "Lose": {
+          this.gameData.lost = true;
+        }
       }
 
       if(event.events){
