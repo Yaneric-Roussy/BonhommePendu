@@ -18,7 +18,10 @@ namespace BonhommePendu.Events
 
             if (gameData.HasGuessedTheWord)
             {
-                //FAIRE VICTOIRE
+                Events = new List<GameEvent>
+                {
+                    new WinEvent(gameData)
+                };
             }
         }
     }

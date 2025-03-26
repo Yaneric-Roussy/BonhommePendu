@@ -16,7 +16,7 @@
     <p style="font-size: 48px; margin-top:16px; margin-bottom: 16px; font-family: 'Lucida Grande', monospace;">{{gameData.revealedWord}}</p>
     <p style="font-size: 24px; margin-top:16px; margin-bottom: 16px; font-family: 'Lucida Grande', monospace;">Lettres: {{gameData.guessedLetters.join(",")}}</p>
     <form *ngIf="!gameData.won && !gameData.lost" (keyup.enter)="guessWord()">
-      <input type="text" maxlength="1" [(ngModel)]="letter" name="letter">
+      <input type="text" maxlength="1" [(ngModel)]="letter" name="letter" [disabled]="gameData.won">
       <button type="button" [disabled]="letter.length == 0" (click)="guessWord()">Deviner</button>
     </form>
     <div *ngIf="gameData.won">
