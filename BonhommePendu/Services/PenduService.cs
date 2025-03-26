@@ -6,7 +6,7 @@ namespace BonhommePendu.Services
 {
     public class PenduService
     {
-        public const string LANGUAGE = "en";
+        public const string LANGUAGE = "fr";
 
         private GameData _gameData { get; set; }
 

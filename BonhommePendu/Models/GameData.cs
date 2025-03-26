@@ -45,7 +45,10 @@ namespace BonhommePendu.Models
             var letterInWord = Word[index];
 
             // Pas de support du français pour l'instant
-            bool memeLettre = letter == letterInWord;
+            string s1 = letter.ToString();
+            string s2 = letterInWord.ToString();
+
+            bool memeLettre = s1 == s2;
             
             // Si la lettre n'est pas encore découverte
             return memeLettre;

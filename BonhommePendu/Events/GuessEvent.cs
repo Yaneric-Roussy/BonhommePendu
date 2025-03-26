@@ -27,6 +27,8 @@ namespace BonhommePendu.Events
                 }
             }
 
+            string test = gameData.Word;
+
             if (!letterFound)
             {
                 WrongGuessEvent wrongGuessEvent = new WrongGuessEvent(gameData);
