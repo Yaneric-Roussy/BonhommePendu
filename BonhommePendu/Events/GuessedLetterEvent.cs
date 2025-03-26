@@ -8,8 +8,11 @@ namespace BonhommePendu.Events
         public override string EventType { get { return "GuessedLetter"; } }
 
         // TODO: Compléter
+        public char Letter { get; set; }
         public GuessedLetterEvent(GameData gameData, char letter)
         {
+            Letter = letter;
+            gameData.GuessedLetters.Add(letter);
         }
     }
 }
