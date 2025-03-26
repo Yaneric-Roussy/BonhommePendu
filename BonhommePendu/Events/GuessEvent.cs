@@ -17,18 +17,20 @@ namespace BonhommePendu.Events
 
 
             bool letterFound = false;
-            for (int i = 0; i < gameData.Word.Length; i++)
+            for (int i = 0; i < gameData.RevealedWord.Length; i++)
             {
                 if(gameData.HasSameLetterAtIndex(letter, i))
                 {
                     letterFound = true;
+                    RevealLetterEvent revealLetterEvent = new RevealLetterEvent(gameData, letter, i);
+                    Events.Add(revealLetterEvent);
                 }
             }
 
             if (!letterFound)
             {
-                WrongGuessEvent test = new WrongGuessEvent(gameData);
-                Events.Add(test);
+                WrongGuessEvent wrongGuessEvent = new WrongGuessEvent(gameData);
+                Events.Add(wrongGuessEvent);
             }
 
 
